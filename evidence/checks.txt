@@ -1,0 +1,16 @@
+$ go test ./...
+?   	example.com/pr10/cmd/server	[no test files]
+ok  	example.com/pr10/internal/auth	2.443s
+
+
+$ go vet ./...
+
+
+$ go test -race -v ./internal/auth
+=== RUN   TestTokenValidation
+--- PASS: TestTokenValidation (7.42s)
+=== RUN   TestRefreshSingleUseConcurrent
+--- PASS: TestRefreshSingleUseConcurrent (7.37s)
+PASS
+ok  	example.com/pr10/internal/auth	16.314s
+
